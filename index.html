@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <audio src="music/marry.mp3" id="audio"  autoplay preload loop="loop"></audio> -->
+	<audio preload="preload" controls id="car_audio" src="music/marry.mp3" loop></audio>  
+	
+	  <script>  
+	   setTimeout(function(){  
+		   $(window).scrollTop(1);  
+	   },0);  
+		document.getElementById('car_audio').play();  
+		document.addEventListener("WeixinJSBridgeReady", function () {  
+			  WeixinJSBridge.invoke('getNetworkType', {}, function (e) {  
+				  document.getElementById('car_audio').play();  
+			  });  
+		}, false);  
+	  </script>  
+	<title>岁月 静好</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="pageBg"></div>
+
+<div id="view">
+	<div id="logo1">
+		<div class="logoImg">
+			<img src="load/logo.png">
+		</div>
+		<p class="logoText">已加载 0%</p>
+	</div>
+	<div id="main">
+		<div id="tZ">
+			<div id="panoBg"></div>
+			<div id="cloud"></div>
+			<div id="pano"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/m.Tween.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>
